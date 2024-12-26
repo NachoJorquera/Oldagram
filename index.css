@@ -1,5 +1,87 @@
-html, body {
-    margin: 0;
+body {
+    margin: 0 auto;
     padding: 0;
+    width: 375px;
+    background-color: #ededed;
+    font-family: "Source Sans 3", sans-serif;
+    font-size: 13px;
+}
+
+nav {
+    height: 67px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 0 16px;
+    margin: 0;
+    border-bottom: 1px solid #C6C6C6;
+}
+
+.logo {
+    width: 126px;
+}
+
+.user-img {
+    border-radius: 50%;
+    height: 34px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #ffffff;
+}
+
+.user-info {
+    margin-left: 7px;
+    font-size: 12px;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+.mg-zero {
+    margin: 0;
+}
+
+main {
+    height: 375px;
+}
+
+.main-img {
+    width: 100%;
+}
+
+section {
+    padding: 20px 15px 10px;
+    margin: 0;
+    background-color: #ffffff;
+}
+
+.icon {
+    height: 23px;
+    display: flex;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    width: 100px;
+    justify-content: space-between;
+}
+
+a {
+    cursor: pointer;
+}
+
+.mg-ten {
+    margin-bottom: 10px; 
+}
+
+.in-block {
+    display: inline-block;
 }
 
