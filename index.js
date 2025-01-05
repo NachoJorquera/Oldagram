@@ -58,7 +58,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
         const likeBtn = document.getElementById(`like-btn-${i}`)
         const likeEl = document.getElementById(`like-${i}`)
 
-        likeBtn.addEventListener("click", function() {
+        likeBtn.addEventListener("dblclick", function() {
             posts[i].likes += 1
             likeEl.textContent = posts[i].likes + ' likes'
         })
