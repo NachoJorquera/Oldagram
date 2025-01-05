@@ -6,7 +6,7 @@ const posts = [
         avatar: "images/avatar-vangogh.jpg",
         post: "images/post-vangogh.jpg",
         comment: "just took a few mushrooms lol",
-        likes: 21
+        likes: 21492
     },
     {
         name: "Gustave Courbet",
@@ -28,3 +28,39 @@ const posts = [
     }
 ]
 
+const containerEl = document.getElementById("container")
+
+for (let i = 0; i < posts.length; i++) {
+    containerEl.innerHTML += 
+        `<header>
+            <img class="user-img" src="${posts[i].avatar}" alt="Profile image of Vincent van Gogh.">
+            <div class="user-info">
+                <p class="bold-text mg-zero">${posts[i].name}</p>
+                <p class="mg-zero">${posts[i].location}</p>
+            </div>
+        </header>
+        <main>
+            <img class="main-img" src="${posts[i].post}" alt="Self-portrait by Vincent van Gogh."></img>
+        </main>
+        <section>
+            <div class="icons">
+                <a id="like-btn-${i}"><img class="icon" src="images/like.png" alt="Heart icon."></a>
+                <a><img class="icon" src="images/comment.png" alt="Comment icon."></a>
+                <a><img class="icon" src="images/share.png" alt="Dm icon."></a>
+            </div>
+            <p id="like-${i}" class="bold-text mg-ten">${posts[i].likes} likes</p>
+            <p class="mg-zero in-block"><span class="bold-text">${posts[i].username}</span> ${posts[i].comment}</p>
+        </section>`
+}
+
+window.addEventListener("DOMContentLoaded", (event) => {
+    for (let i = 0; i < posts.length; i++) {
+        const likeBtn = document.getElementById(`like-btn-${i}`)
+        const likeEl = document.getElementById(`like-${i}`)
+
+        likeBtn.addEventListener("click", function() {
+            posts[i].likes += 1
+            likeEl.textContent = posts[i].likes + ' likes'
+        })
+    } 
+});
