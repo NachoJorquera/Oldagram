@@ -35,8 +35,9 @@ header {
     padding: 10px;
 }
 
-main {
+#img-section {
     height: 375px;
+    padding: 0;
 }
 
 section {
@@ -67,16 +68,15 @@ section {
 .icon {
     height: 23px;
     display: flex;
+    transition: 0.1s;
 }
 
 .icon:hover {
     scale: 1.15;
-    transition: 0.1s;
 }
 
 .icon:active {
     scale: 1;
-    transition: 0.1s;
 }
 
 .icons {
